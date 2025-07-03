@@ -2,155 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Online Adda - Book & Gadget Hub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Adda Bookstore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #111;
+    body { margin: 0; font-family: Arial, sans-serif; background: #f4f4f4; }
+    .header {
+      background: #fff;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+    }
+    .header p {
+      font-size: 14px;
+      color: #333;
+      margin: 5px;
+    }
+    .highlight { background: #aef3ff; color: #000; font-weight: bold; padding: 4px 8px; display: inline-block; }
+    .logo-bar {
+      background: #004080;
       color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .banner {
-      background: linear-gradient(to right, #000000, #333);
-      padding: 30px 20px;
-      text-align: center;
-    }
-    .banner h1 {
-      font-size: 28px;
+    .logo-bar h1 {
       margin: 0;
-      line-height: 1.4;
+      font-size: 20px;
     }
-    .product-box {
-      max-width: 600px;
-      margin: 30px auto;
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
+    .cart-icon {
+      font-size: 20px;
+      background: white;
+      color: #004080;
+      padding: 8px 12px;
+      border-radius: 50%;
     }
-    .product-box img {
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background: white;
+    }
+    .search-bar input {
       width: 90%;
-      border-radius: 10px;
-      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
     }
-    .product-box h2 {
-      font-size: 22px;
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
     }
-    .product-box a {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 10px 18px;
-      margin-top: 10px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 16px;
-    }
-    .upi-box {
-      max-width: 600px;
-      margin: 20px auto;
-      background: #1f1f1f;
-      padding: 20px;
-      border-radius: 12px;
+    .product {
+      background: white;
+      width: 160px;
+      border-radius: 8px;
+      padding: 10px;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .footer {
-      text-align: center;
-      padding: 20px;
-      color: #aaa;
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
     }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 12px 16px;
-      border-radius: 50px;
-      font-size: 22px;
-      text-decoration: none;
+    .product h3 {
+      font-size: 14px;
+      margin: 10px 0 5px;
+    }
+    .price {
+      font-size: 14px;
+    }
+    .price del {
+      color: grey;
+    }
+    .price span {
+      color: green;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <!-- Welcome Banner -->
-  <div class="banner">
-    <h1>Welcome to Online Adda<br>Your Gadget & Book Hub</h1>
+  <!-- Header Info -->
+  <div class="header">
+    <p>MONDAY TO SATURDAY 11AM TO 6PM</p>
+    <p>CLOSED ON SUNDAY</p>
+    <p class="highlight">WHATSAPP INQUIRY ONLY ON 9714043017</p>
   </div>
 
-  <!-- Book Card -->
-  <div class="product-box">
-    <h2>📘 Yuva NCERT Aadhunik + Prachin Combo</h2>
-    <img src="https://raw.githubusercontent.com/ONLINEADDA600/online-adda/main/IMG_20250703_144650.jpg" alt="Book Cover">
-    <p style="font-size: 18px;">Price: ₹410</p>
-    <a href="https://wa.me/919714043017?text=Hi%2C%20I%20want%20to%20buy%20Yuva%20NCERT%20Combo%20book%20set%20for%20₹410">📲 Order on WhatsApp</a>
+  <!-- Logo + Cart -->
+  <div class="logo-bar">
+    <h1>📚 Online Adda</h1>
+    <div class="cart-icon">🛒</div>
   </div>
 
-  <!-- UPI Info -->
-  <div class="upi-box">
-    <h3>💸 Pay via UPI</h3>
-    <p><strong>UPI ID:</strong> 9913007813-5@ybl</p>
-    <p>Send screenshot on WhatsApp after payment</p>
+  <!-- Search -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search your books here...">
   </div>
 
-  <!-- Footer -->
-  <div class="footer">
-    <p>We accept UPI & Cash payments</p>
-    <p>© 2025 Online Adda</p>
+  <!-- Product List -->
+  <div class="products">
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/ONLINEADDA600/online-adda/main/IMG_20250703_144650.jpg" alt="book">
+      <h3>Yuva NCERT Combo</h3>
+      <div class="price"><del>₹500</del> <span>₹410</span></div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="book">
+      <h3>Latest Liberty July 2025</h3>
+      <div class="price"><del>₹110</del> <span>₹95</span></div>
+    </div>
   </div>
-
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/919714043017" class="whatsapp-float" target="_blank">💬</a>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Online Adda - Your Gadget & Book Hub</title>
-</head>
-<body style="margin: 0; font-family: Arial, sans-serif; background: #111; color: white;">
-
-  <!-- Welcome Banner -->
-  <div style="background: linear-gradient(to right, #000000, #333); padding: 30px; text-align: center;">
-    <h1 style="font-size: 32px;">Welcome to Online Adda – Your Gadget & Book Hub</h1>
-  </div>
-
-  <!-- Book Listing -->
-  <div style="max-width: 600px; margin: 40px auto; background: #1a1a1a; padding: 20px; border-radius: 12px;">
-    <h2 style="font-size: 24px;">📘 Yuva NCERT Aadhunik + Prachin Combo</h2>
-    <img src="https://raw.githubusercontent.com/ONLINEADDA600/online-adda/main/IMG_20250703_144650.jpg" alt="Yuva Book" width="90%" style="border-radius: 10px; margin: 20px 0;">
-    <p style="font-size: 18px;">Price: <strong>₹410</strong></p>
-
-    <!-- WhatsApp Order Button -->
-    <a href="https://wa.me/919714043017?text=Hi%2C%20I%20want%20to%20buy%20Yuva%20NCERT%20Combo%20book%20set%20for%20₹410" 
-       target="_blank" 
-       style="background: #25D366; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-size: 16px;">
-      📲 Order on WhatsApp
-    </a>
-  </div>
-
-  <!-- Payment Section -->
-  <div style="max-width: 600px; margin: 20px auto; background: #1f1f1f; padding: 20px; border-radius: 12px;">
-    <h3>💸 Pay via UPI</h3>
-    <p><strong>UPI ID:</strong> 9913007813-5@ybl</p>
-    <p>After payment, please send the screenshot on WhatsApp.</p>
-  </div>
-
-  <!-- Footer -->
-  <div style="text-align: center; padding: 30px; color: gray;">
-    <p>We accept UPI & Cash payments</p>
-    <p>© 2025 Online Adda</p>
-  </div>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/919714043017" target="_blank" 
-     style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 12px 16px; border-radius: 50px; font-size: 20px;">
-    💬
-  </a>
 
 </body>
 </html>
